@@ -23,7 +23,7 @@ class RandomizerPage extends ConsumerWidget {
       ),
       floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
-            randomizer.generateRandomNumber();
+            ref.read(randomizerProvider.notifier).generateRandomNumber();
           },
           label: const Text('Generate')),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
